@@ -36,7 +36,12 @@
         }
         /* Custom spacing to mimic 'two line breaks' visually */
         .list-spacing > :not([hidden]) ~ :not([hidden]) {
-            margin-top: 2.5rem; /* Equivalent to roughly two blank lines */
+            margin-top: 1.5rem; /* Mobile: smaller spacing */
+        }
+        @media (min-width: 768px) {
+            .list-spacing > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 2.5rem; /* Desktop: larger spacing */
+            }
         }
     </style>
 </head>
@@ -80,86 +85,100 @@
 <!-- Gift List Section -->
 <div class="w-full max-w-[720px] flex flex-col items-center">
 <!-- Subtitle -->
-<div class="mb-8 flex items-center gap-3">
-<div class="h-px w-12 bg-slate-300 dark:bg-slate-700"></div>
-<h2 class="text-[#1b0d14] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">선물 목록</h2>
-<div class="h-px w-12 bg-slate-300 dark:bg-slate-700"></div>
+<div class="mb-6 md:mb-8 flex items-center gap-2 md:gap-3">
+<div class="h-px w-8 md:w-12 bg-slate-300 dark:bg-slate-700"></div>
+<h2 class="text-[#1b0d14] dark:text-white text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] whitespace-nowrap">선물 목록</h2>
+<div class="h-px w-8 md:w-12 bg-slate-300 dark:bg-slate-700"></div>
 </div>
 <!-- List Box -->
-<div class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-8 md:p-10">
+<div class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-4 md:p-8 lg:p-10">
 <div class="list-spacing flex flex-col">
 <!-- Item 1 -->
-<a href="https://smartstore.naver.com/sunnyhousemall/products/4978275654?site_preference=device&NaPm=ct%3Dmjofzxmo%7Cci%3Dshopn%7Ctr%3Dnshfum%7Chk%3D85dc4ded9b4c5ccf4061d6da1758f4fd77ea75b4%7Ctrx%3Dundefined" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">1.</span>
+<a href="https://smartstore.naver.com/sunnyhousemall/products/4978275654?site_preference=device&NaPm=ct%3Dmjofzxmo%7Cci%3Dshopn%7Ctr%3Dnshfum%7Chk%3D85dc4ded9b4c5ccf4061d6da1758f4fd77ea75b4%7Ctrx%3Dundefined" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">1.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">주방 뼈 가위</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">주방 뼈 가위</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 2 -->
-<a href="https://www.coupang.com/vp/products/104175433?itemId=316086099&vendorItemId=3776373448&q=%EB%91%90%EB%A3%A8%EB%A7%88%EB%A6%AC+%EA%B0%81%ED%9C%B4%EC%A7%80+%EC%84%B8%ED%8A%B8&searchId=5c4a198d7009760&sourceType=search&itemsCount=36&searchRank=7&rank=7&traceId=mjog4wdp" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">2.</span>
+<a href="https://www.coupang.com/vp/products/104175433?itemId=316086099&vendorItemId=3776373448&q=%EB%91%90%EB%A3%A8%EB%A7%88%EB%A6%AC+%EA%B0%81%ED%9C%B4%EC%A7%80+%EC%84%B8%ED%8A%B8&searchId=5c4a198d7009760&sourceType=search&itemsCount=36&searchRank=7&rank=7&traceId=mjog4wdp" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">2.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">두루마리 휴지/각티슈</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">두루마리 휴지/각티슈</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 3 -->
-<a href="https://www.coupang.com/vp/products/8734769909?itemId=18902473253&vendorItemId=90723269596&pickType=COU_PICK&q=%ED%81%B0%EB%83%84%EB%B9%84&searchId=3b8ea74a797590&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mjog629i" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">3.</span>
+<a href="https://www.coupang.com/vp/products/8734769909?itemId=18902473253&vendorItemId=90723269596&pickType=COU_PICK&q=%ED%81%B0%EB%83%84%EB%B9%84&searchId=3b8ea74a797590&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mjog629i" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">3.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">곰솥 냄비</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">곰솥 냄비</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 4 -->
-<a href="https://www.coupang.com/vp/products/7655694612?itemId=20381755330&vendorItemId=87465004236&q=%EA%B0%90%EC%B4%88%EC%82%AC%ED%83%95&searchId=b4c240e57561321&sourceType=search&itemsCount=36&searchRank=3&rank=3&traceId=mjog6qg1" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">4.</span>
+<a href="https://www.coupang.com/vp/products/7655694612?itemId=20381755330&vendorItemId=87465004236&q=%EA%B0%90%EC%B4%88%EC%82%AC%ED%83%95&searchId=b4c240e57561321&sourceType=search&itemsCount=36&searchRank=3&rank=3&traceId=mjog6qg1" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">4.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">감초사탕</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">감초사탕</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 5 -->
-<a href="https://www.coupang.com/vp/products/8376506000?itemId=24635829015&vendorItemId=92528939422&q=%EC%95%84%EC%BD%98%20ak47&searchId=d66266877042918&sourceType=search&itemsCount=36&searchRank=2&rank=2&traceId=mjogb9cf" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">5.</span>
+<a href="https://www.coupang.com/vp/products/8376506000?itemId=24635829015&vendorItemId=92528939422&q=%EC%95%84%EC%BD%98%20ak47&searchId=d66266877042918&sourceType=search&itemsCount=36&searchRank=2&rank=2&traceId=mjogb9cf" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">5.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">아콘 AK47</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">아콘 AK47</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 6 -->
-<a href="https://www.coupang.com/vp/products/8636050907?itemId=25057765109&vendorItemId=92062037653&sourceType=srp_product_ads&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&traceId=mjogc6wv" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">6.</span>
+<a href="https://www.coupang.com/vp/products/8636050907?itemId=25057765109&vendorItemId=92062037653&sourceType=srp_product_ads&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&traceId=mjogc6wv" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">6.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">버티컬마우스</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">버티컬마우스</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 7 -->
-<a href="https://www.coupang.com/vp/products/6590379595?itemId=14869152830&vendorItemId=82108197408&pickType=COU_PICK&q=%EB%AC%B4%EB%93%9C%EB%93%B1&searchId=a25e8ff79996779&sourceType=search&itemsCount=36&searchRank=6&rank=6&traceId=mjogdgnd" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">7.</span>
+<a href="https://www.coupang.com/vp/products/6590379595?itemId=14869152830&vendorItemId=82108197408&pickType=COU_PICK&q=%EB%AC%B4%EB%93%9C%EB%93%B1&searchId=a25e8ff79996779&sourceType=search&itemsCount=36&searchRank=6&rank=6&traceId=mjogdgnd" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">7.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">무드등</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">무드등</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 8 -->
-<a href="https://www.coupang.com/vp/products/8936634401?itemId=26129434508&vendorItemId=92941716929&pickType=COU_PICK&q=%EC%A3%BC%EB%B0%A9+%ED%8A%B8%EB%A1%A4%EB%A6%AC&searchId=8a3f1b217521337&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mjogfzgj" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">8.</span>
+<a href="https://www.coupang.com/vp/products/8936634401?itemId=26129434508&vendorItemId=92941716929&pickType=COU_PICK&q=%EC%A3%BC%EB%B0%A9+%ED%8A%B8%EB%A1%A4%EB%A6%AC&searchId=8a3f1b217521337&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mjogfzgj" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">8.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">주방 트롤리</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">주방 트롤리</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
 <!-- Item 9 -->
-<a href="https://www.coupang.com/vp/products/7358089076?itemId=21566967918&vendorItemId=86077127266&sourceType=srp_product_ads&clickEventId=e3f23360-e338-11f0-ad7f-20032bbb3452&korePlacement=15&koreSubPlacement=1&clickEventId=e3f23360-e338-11f0-ad7f-20032bbb3452&korePlacement=15&koreSubPlacement=1&traceId=mjogih3k" target="_blank" class="flex items-start gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-2 -m-2 transition-colors">
-<span class="text-primary font-bold text-lg min-w-[24px]">9.</span>
+<a href="https://www.coupang.com/vp/products/7358089076?itemId=21566967918&vendorItemId=86077127266&sourceType=srp_product_ads&clickEventId=e3f23360-e338-11f0-ad7f-20032bbb3452&korePlacement=15&koreSubPlacement=1&clickEventId=e3f23360-e338-11f0-ad7f-20032bbb3452&korePlacement=15&koreSubPlacement=1&traceId=mjogih3k" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">9.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-lg font-medium leading-normal">재떨이</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">재떨이</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
 </div>
 </a>
+</div>
+</div>
+<!-- Contact Info Section -->
+<div class="w-full mt-8 text-center">
+<div class="bg-primary/5 border-2 border-primary/20 rounded-xl p-6 md:p-8">
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">contact_phone</span>
+<p class="text-slate-700 dark:text-slate-200 text-base md:text-lg font-medium leading-relaxed break-keep">
+선물이 정해졌다면, 카카오톡, 인스타그램 등으로 연락주세요
+</p>
+<a href="tel:010-3792-1090" class="text-primary font-bold text-xl md:text-2xl hover:underline transition-all">
+010-3792-1090
+</a>
+</div>
 </div>
 </div>
 </div>
