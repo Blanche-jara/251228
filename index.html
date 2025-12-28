@@ -91,7 +91,14 @@
 <div class="h-px w-8 md:w-12 bg-slate-300 dark:bg-slate-700"></div>
 </div>
 <!-- List Box -->
-<div class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-4 md:p-8 lg:p-10">
+<div class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-4 md:p-8 lg:p-10 relative">
+<!-- Sold Out Overlay -->
+<div class="absolute inset-0 bg-white/80 dark:bg-slate-900/80 rounded-xl flex flex-col items-center justify-center z-10 pointer-events-none backdrop-blur-sm">
+<div class="text-center">
+<p class="text-primary font-black text-6xl md:text-8xl tracking-wider mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">완 판</p>
+<p class="text-slate-700 dark:text-slate-200 font-bold text-2xl md:text-4xl">감사합니다</p>
+</div>
+</div>
 <div class="list-spacing flex flex-col">
 <!-- Item 1 -->
 <a href="https://smartstore.naver.com/sunnyhousemall/products/4978275654?site_preference=device&NaPm=ct%3Dmjofzxmo%7Cci%3Dshopn%7Ctr%3Dnshfum%7Chk%3D85dc4ded9b4c5ccf4061d6da1758f4fd77ea75b4%7Ctrx%3Dundefined" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98] opacity-60">
@@ -134,19 +141,19 @@
 </div>
 </a>
 <!-- Item 6 -->
-<a href="https://www.coupang.com/vp/products/8636050907?itemId=25057765109&vendorItemId=92062037653&sourceType=srp_product_ads&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&traceId=mjogc6wv" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<a href="https://www.coupang.com/vp/products/8636050907?itemId=25057765109&vendorItemId=92062037653&sourceType=srp_product_ads&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&clickEventId=3334d6e0-e338-11f0-b552-0f87ff0c76ae&korePlacement=15&koreSubPlacement=1&traceId=mjogc6wv" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98] opacity-60">
 <span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">6.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">버티컬마우스</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal line-through">버티컬마우스</p>
+<span class="material-symbols-outlined text-primary transition-colors text-xl md:text-2xl" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">check_circle</span>
 </div>
 </a>
 <!-- Item 7 -->
-<a href="https://www.coupang.com/vp/products/6590379595?itemId=14869152830&vendorItemId=82108197408&pickType=COU_PICK&q=%EB%AC%B4%EB%93%9C%EB%93%B1&searchId=a25e8ff79996779&sourceType=search&itemsCount=36&searchRank=6&rank=6&traceId=mjogdgnd" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98]">
+<a href="https://www.coupang.com/vp/products/6590379595?itemId=14869152830&vendorItemId=82108197408&pickType=COU_PICK&q=%EB%AC%B4%EB%93%9C%EB%93%B1&searchId=a25e8ff79996779&sourceType=search&itemsCount=36&searchRank=6&rank=6&traceId=mjogdgnd" target="_blank" class="flex items-start gap-3 md:gap-4 group cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-lg p-3 md:p-2 -m-3 md:-m-2 transition-colors active:scale-[0.98] opacity-60">
 <span class="text-primary font-bold text-base md:text-lg min-w-[20px] md:min-w-[24px]">7.</span>
 <div class="flex-1 flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-2 border-dashed">
-<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal">무드등</p>
-<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors text-xl md:text-2xl">check_circle</span>
+<p class="text-[#1b0d14] dark:text-slate-100 text-base md:text-lg font-medium leading-normal line-through">무드등</p>
+<span class="material-symbols-outlined text-primary transition-colors text-xl md:text-2xl" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">check_circle</span>
 </div>
 </a>
 <!-- Item 8 -->
